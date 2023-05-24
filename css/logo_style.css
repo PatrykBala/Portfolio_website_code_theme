@@ -1,0 +1,79 @@
+:root {
+    --background-color: #fff;
+    --text-black-color: #000;
+}
+
+body {
+    display: flex;
+    height: 90vh;
+    background-color: var(--background-color);
+  }
+  
+  .text {
+    margin: auto;
+    font-size: 50px;
+    transform: rotatex(35deg) rotatey(55deg);
+    transform-style: preserve-3d;
+    animation: text-spin 3.6s infinite ease-in-out alternate;
+  }
+  
+  .side {
+    transform-style: preserve-3d;
+  }
+
+  .side::before {
+    content: "Patryk Bala";
+    position: absolute;
+    color: var(--text-black-color);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translatez(0.5em);
+    animation: text-explode 3.6s infinite ease-in-out;
+    opacity: 0.7;
+  }
+  
+  .side:nth-child(1) {
+    transform: rotatey(90deg);
+  }
+  
+  .side:nth-child(2) {
+    transform: rotatey(180deg);
+  }
+  
+  .side:nth-child(3) {
+    transform: rotatey(270deg);
+  }
+  
+  .side:nth-child(4) {
+    transform: rotatey(360deg);
+  }
+  
+  .side:nth-child(5) {
+    transform: rotatex(90deg);
+  }
+  
+  .side:nth-child(6) {
+    transform: rotatex(250deg);
+  }
+  
+  @keyframes text-spin {
+    0% {
+      transform: rotatex(30deg) rotatey(55deg);
+    }
+    100% {
+      transform: rotatex(30deg) rotatey(380deg);
+    }
+  }
+  @keyframes text-explode {
+    0% {
+      transform: translatez(0.5em);
+    }
+    50% {
+      transform: translatez(2.5em);
+    }
+    100% {
+      transform: translatez(0.5em);
+    }
+  }

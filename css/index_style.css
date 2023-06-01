@@ -8,6 +8,7 @@
 
   --white-color: #fff;
   --black-color: #000;
+  --grey-color: #494949;
   --red-color: #d34c65;
 
   --shadow1: rgba(46, 229, 157, 0.4);
@@ -71,14 +72,6 @@ body {
   font-size: medium;
 }
 
-
-
-
-
-
-
-
-
 /*code*/
 .wrap {
   position: fixed;
@@ -98,21 +91,6 @@ span.load {
   color: var(--text-color2);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*button container*/
 .button_container {
   display: flex;
@@ -120,29 +98,6 @@ span.load {
   justify-content: center;
   position: relative;
   bottom: 170px;
-}
-
-.enter_button {
-  width: 140px;
-  height: 45px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px var(--black-color);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-  }
-
-.enter_button:hover {
-  background-color: #2EE59D;
-  box-shadow: 0px 15px 20px var(--shadow1);
-  color: #fff;
-  transform: translateY(-7px);
 }
 
 /*social*/
@@ -205,6 +160,75 @@ span.load {
 
 .me:hover {
   border-radius: 20%;
+}
+
+.modal_wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  background: var(--background-global);
+  opacity: 0;
+  visibility: visible;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal_wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  width: 600px;
+  height: 400px;
+  margin: 50% 0 0 -300px;
+  position: relative;
+  top: 50%; 
+  left: 50%;
+  background: var(--grey-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.modal_wrapper.open .modal {
+  margin-top: -200px;
+  opacity: 1;
+}
+
+.head{
+  padding: 1em 5%;
+  overflow: hidden;
+  background: var(--black-color);
+}
+
+.btn_close {
+  width: 32px;
+  height: 32px;
+  display: block;
+  float: right;
+}
+
+.btn_close::before, 
+.btn_close::after {
+  content: '';
+  width: 32px;
+  height: 6px;
+  display: block;
+  background: var(--red-color);
+}
+
+.btn_close::before {
+  margin-top: 12px;
+  transform:rotate(45deg);
+}
+
+.btn_close::after {
+  margin-top: -6px;
+  transform:rotate(-45deg);
+}
+
+.content {
+  padding: 5%;
 }
 
 /*footer*/

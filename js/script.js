@@ -6,3 +6,6 @@ $( document ).ready(function() {
   });
 });
 
+$(document).ready(function(){
+  $('body,html').animate({scrollTop: 50}, 1500); 
+});

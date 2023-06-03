@@ -47,7 +47,7 @@ body {
 /*description text*/
 #description_text{
   position: fixed;
-  top: 5%;
+  top: 1%;
 }
 
 .var_highlight{
@@ -64,18 +64,22 @@ body {
 /*code*/
 .wrap {
   position: fixed;
-  top: 5%;
+  top: 1%;
   right: 5%;
 }
+
 code {
   color: var(--white-color);
 }
+
 span.blue {
   color: var(--text-color4);
 }
+
 span.comment {
   color: var(--text-color1);
 }
+
 span.load {
   color: var(--text-color2);
 }
@@ -139,7 +143,7 @@ footer p a {
 /*footer*/
 /*my picture*/
 .me {
-    display: block; /*TUTAJ POPRAWIĆ !!!!!!!!!!!!! KLIKANIE NA ZDJĘCIE*/
+    display: grid;
     margin: 1em auto;
     width: 150px;
     height: 150px;
@@ -147,10 +151,6 @@ footer p a {
     position: relative;
     z-index: 2;
   }
-
-.me:hover {
-  border-radius: 20%;
-}
 
 .modal_wrapper {
   width: 100%;
@@ -279,16 +279,12 @@ footer .block {
   transition: all 0.5s;
   text-align: center;
 }
+
 .menu_wrapper:hover {
   border: 1.5px solid #74c0fc;
   bottom: 10px;
 }
-.menu_wrapper h3 {
-  font-family: "Roboto Mono", "Courier New", monospace;
-  font-size: 12px;
-  line-height: 18px;
-  padding-top: 12px;
-}
+
 .menu_wrapper h2 {
   font-family: "Inter", sans-serif;
   font-size: 13px;
@@ -301,37 +297,89 @@ footer .block {
   text-decoration: none;
 }
 
-/* @media (min-width: 768px) {
-  body {
-    padding: 100px 0;
+/*responsive*/
+@media screen and (max-width: 620px) {
+  /*for mobile phones*/
+
+  /*typing text*/
+  .typing_text {
+    font-size: 1.0em;
   }
-  .menu-wrapper {
-    width: 200px;
-    height: 208px;
-    text-align: start;
-    margin: 4px;
-    padding: 16px;
+
+  /*left text*/
+  #description_text{
+    font-size: 0.6em;
+    left: -8%;
   }
-  .source img {
-    width: 5%;
+  
+  .var_highlight{
+    font-size: 0.6em;
   }
-  .menu-wrapper span {
-    border-radius: 4px;
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
+  
+  .string_highlight{
+    font-size: 0.6em;
   }
-  .menu-wrapper p {
-    color: rgb(153, 152, 152);
-    font-size: 12px;
+
+
+  /*right text*/
+  .wrap {
+    font-size: 0.6em;
   }
-  .menu-wrapper .item {
-    color: #fff;
+  
+  /*right bottom*/
+  footer p, 
+  footer p a { 
+    font-size: 0.6em;
   }
-  .menu-wrapper .item:hover {
-    text-decoration: underline;
+
+  .menu_wrapper {
+    width: 100px;
   }
-} */
+
+  footer .block {
+    font-size: 0.6em;
+  }
+
+  .menu_wrapper h2 {
+    font-size: 0.6em;
+  }
+
+  /*social icons*/
+  .social-icons a i{
+    font-size: 1.5em;
+  }
+
+  /*image*/
+  .me {
+    width: 120px;
+    height: 120px;
+  }
+
+  /*left bottom*/
+  .email_address {
+    font-size: 0.6em;
+  }
+
+  .email_text {
+    font-size: 0.6em;
+  }
+
+  /**/
+  .modal {
+    width: 80%;
+    height: 90%;
+    margin: 50% 0 0 -40%;
+  }
+  
+  .content p,
+  .content li {
+    font-size: 0.7em;
+  }
+
+  .btn_close::before, 
+  .btn_close::after {
+    width: 70%;
+  }
+
+
+}

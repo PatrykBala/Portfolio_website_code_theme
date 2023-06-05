@@ -152,69 +152,10 @@ footer p a {
     z-index: 2;
   }
 
-.modal_wrapper {
-  width: 100%;
-  height: 60%;
-  position: fixed;
-  top: 0; 
-  left: 0;
-  background: var(--background-global);
-  opacity: 0;
-  visibility: visible;
-  transition: all 0.25s ease-in-out;
-}
-
-.modal_wrapper.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.modal {
-  width: 600px;
-  height: 400px;
-  margin: 50% 0 0 -300px;
-  position: relative;
-  top: 50%; 
-  left: 50%;
-  background: var(--grey-color);
-  transition: all 0.5s ease-in-out;
-}
-
-.modal_wrapper.open .modal {
-  margin-top: -200px;
-  opacity: 1;
-}
-
 .head{
   padding: 1em 5%;
   overflow: hidden;
   background: var(--black-color);
-}
-
-.btn_close {
-  width: 32px;
-  height: 32px;
-  display: block;
-  float: right;
-}
-
-.btn_close::before, 
-.btn_close::after {
-  content: '';
-  width: 32px;
-  height: 6px;
-  display: block;
-  background: var(--white-color);
-}
-
-.btn_close::before {
-  margin-top: 12px;
-  transform:rotate(45deg);
-}
-
-.btn_close::after {
-  margin-top: -6px;
-  transform:rotate(-45deg);
 }
 
 .content {
@@ -308,40 +249,40 @@ footer .block {
 
   /*left text*/
   #description_text{
-    font-size: 0.6em;
+    font-size: 0.7em;
     left: -8%;
   }
   
   .var_highlight{
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   
   .string_highlight{
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 
 
   /*right text*/
   .wrap {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
   
   /*right bottom*/
   footer p, 
   footer p a { 
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 
   .menu_wrapper {
-    width: 100px;
+    width: 150px;
   }
 
   footer .block {
-    font-size: 0.6em;
+    font-size: 1.0em;
   }
 
   .menu_wrapper h2 {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 
   /*social icons*/
@@ -357,29 +298,21 @@ footer .block {
 
   /*left bottom*/
   .email_address {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 
   .email_text {
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 
   /**/
-  .modal {
-    width: 80%;
-    height: 90%;
-    margin: 50% 0 0 -40%;
-  }
-  
   .content p,
   .content li {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 
   .btn_close::before, 
   .btn_close::after {
     width: 70%;
   }
-
-
 }

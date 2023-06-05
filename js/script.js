@@ -1,3 +1,3 @@
 $(document).ready(function(){
-  $('body,html').animate({scrollTop: 150}, 1500); 
+  $('body,html').animate({scrollTop: 280}, 1500); 
 });
